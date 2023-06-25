@@ -1,9 +1,8 @@
 from flask import Flask, jsonify
 from threading import Thread
 import json
-from main import JSONFILE
 app = Flask('')
-
+JSONFILE = "test.json" #Replace with file name same in Main.py
 def get_ips_content():
     with open(JSONFILE) as file:
         content = json.load(file)
